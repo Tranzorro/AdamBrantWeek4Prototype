@@ -331,7 +331,7 @@ Prefab:
     - target: {fileID: 61605708650090364, guid: e642bd3aa2a39c642a92035008bebbd7,
         type: 2}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e642bd3aa2a39c642a92035008bebbd7, type: 2}
@@ -852,7 +852,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4655712209920544, guid: 8bb81d7634a57e74a84681c167bb744a, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -4
+      value: -3.895
       objectReference: {fileID: 0}
     - target: {fileID: 4655712209920544, guid: 8bb81d7634a57e74a84681c167bb744a, type: 2}
       propertyPath: m_LocalPosition.z
@@ -896,7 +896,7 @@ Prefab:
     - target: {fileID: 50478246218436932, guid: 8bb81d7634a57e74a84681c167bb744a,
         type: 2}
       propertyPath: m_GravityScale
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 50478246218436932, guid: 8bb81d7634a57e74a84681c167bb744a,
         type: 2}
@@ -923,6 +923,11 @@ Prefab:
       propertyPath: lifeText
       value: 
       objectReference: {fileID: 1982670093}
+    - target: {fileID: 60308432609051016, guid: 8bb81d7634a57e74a84681c167bb744a,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8bb81d7634a57e74a84681c167bb744a, type: 2}
   m_IsPrefabParent: 0

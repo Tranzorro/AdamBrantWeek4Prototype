@@ -12,9 +12,5 @@ public class PlayerMoveScript : MonoBehaviour {
         transform.position += new Vector3(Input.GetAxis("Horizontal"),0, 0);
 
     }
-
-    private void OnCollisionEnter()
-    {
-        Destroy(gameObject);
-    }
+    
 }

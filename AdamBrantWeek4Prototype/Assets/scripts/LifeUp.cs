@@ -23,6 +23,5 @@ public class LifeUp : MonoBehaviour {
             Destroy(gameObject);
         
         }
-
     }
 }

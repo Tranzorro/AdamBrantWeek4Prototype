@@ -18,7 +18,7 @@ public class KillPlayer : MonoBehaviour {
         if (col.gameObject.name == "Player")
         {
             lifeCounter.lifeValue -= 1;
-            Destroy(col.gameObject);
+            Destroy(gameObject);
         }
     }
 }
