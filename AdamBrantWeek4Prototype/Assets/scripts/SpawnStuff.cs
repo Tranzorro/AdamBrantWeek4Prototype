@@ -22,6 +22,7 @@ public class SpawnStuff : MonoBehaviour {
         if(lifeCounter.lifeValue <= 0)
         {
             GameOverText.SetActive(true);
+            Time.timeScale = 0;
         }
     }
     private void OSpawn()
