@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SpawnStuff : MonoBehaviour {
-
+    public GameObject GameOverText;
     public float odelay = 0.1f;
     public float pdelay = 2.5f;
     public GameObject obsticle;
@@ -16,6 +17,13 @@ public class SpawnStuff : MonoBehaviour {
 	}
 
     // Update is called once per frame
+    private void Update()
+    {
+        if(lifeCounter.lifeValue <= 0)
+        {
+            GameOverText.SetActive(true);
+        }
+    }
     private void OSpawn()
     {
         Instantiate(obsticle, new Vector3(Random.Range(-8.5f, 8.5f), 10, 0), Quaternion.identity);

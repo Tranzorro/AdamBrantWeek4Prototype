@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class KillPlayer : MonoBehaviour {
-	// Use this for initialization
+    // Use this for initialization
 	void Start () {
 		
 	}
@@ -19,6 +20,11 @@ public class KillPlayer : MonoBehaviour {
         {
             lifeCounter.lifeValue -= 1;
             Destroy(gameObject);
+        }
+        if (lifeCounter.lifeValue <= 0 && col.gameObject.tag == "Player")
+        {
+            Destroy(col.gameObject);
+            
         }
     }
 }
