@@ -2,10 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestroyOnCollide : MonoBehaviour {
-
-    public GameObject Obsticle;
-
+public class KillPlayer : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		
@@ -15,12 +12,13 @@ public class DestroyOnCollide : MonoBehaviour {
 	void Update () {
 		
 	}
-    private void OnCollisionEnter2D(Collision2D collision)
+
+    private void OnCollisionEnter2D(Collision2D col)
     {
-        if (collision.gameObject.tag == "Floor")
+        if (col.gameObject.name == "Player")
         {
-            Destroy(gameObject);
+            lifeCounter.lifeValue -= 1;
+            Destroy(col.gameObject);
         }
     }
-
 }
