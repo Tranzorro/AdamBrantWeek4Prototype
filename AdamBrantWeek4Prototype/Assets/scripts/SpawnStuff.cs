@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class SpawnStuff : MonoBehaviour {
     public GameObject GameOverText;
     public GameObject RestartButton;
-    public float odelay = 0.1f;
+    public float odelay = 1.0f;
     public float pdelay = 2.5f;
     public GameObject obsticle;
     public GameObject pickUp;
@@ -38,6 +38,11 @@ public class SpawnStuff : MonoBehaviour {
             GameOverText.SetActive(true);
             RestartButton.SetActive(true);
             Time.timeScale = 0;
+            if(Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                RestartGame();
+            }
+            
         }
     }
     private void OSpawn()
