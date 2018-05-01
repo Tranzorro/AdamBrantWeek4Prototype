@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using UnityEngine;
 
 public class PlayerMoveScript : MonoBehaviour {
-    public float speed = 3f;
+    public float speed = 30f;
     Rigidbody2D rigidbody2d;
 
     void Start () {
@@ -17,16 +17,20 @@ public class PlayerMoveScript : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.LeftArrow))
-            rigidbody2d.velocity = new Vector2(speed * -1, 0f);
-        if (Input.GetKey(KeyCode.RightArrow))
-            rigidbody2d.velocity = new Vector2(speed, 0f);
+        
     }
 
     // Update is called once per frame
     void Update () {
        // transform.position += new Vector3(Input.GetAxis("Horizontal"),0, 0);
-
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+            rigidbody2d.velocity = new Vector2(speed * -1, 0f);
+        if (Input.GetKeyUp(KeyCode.LeftArrow))
+            rigidbody2d.velocity = new Vector2(speed * 0, 0f);
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+            rigidbody2d.velocity = new Vector2(speed, 0f);
+        if (Input.GetKeyUp(KeyCode.RightArrow))
+            rigidbody2d.velocity = new Vector2(speed * 0, 0f);
     }
 
 }
